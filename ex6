@@ -1,0 +1,65 @@
+import java.util.Scanner;  
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        getAge(input);   
+        getPi(input);
+
+
+    }
+    static void getName(Scanner input){
+        while(true){
+        try{
+            System.out.println("What's your name?");
+            String name = input.nextLine(); 
+            // System.out.println(name); 
+           break;
+        }
+        catch (Exception e){
+            System.out.println("You've entered an incorrect datatype, please enter an int.");
+            input.nextLine();
+        }
+    }
+}
+    
+    static void getAge(Scanner input){
+        while(true){
+        try{
+           System.out.println("What's your age?");
+           int age = input.nextInt();
+           input.nextLine(); 
+           break;
+        }
+        catch (Exception e){
+            System.out.println("You've entered an incorrect datatype, please enter an int.");
+            input.nextLine();
+        }
+    }
+        
+   }
+
+
+   static void getPi(Scanner input){
+    while(true){
+        try{
+    System.out.println("Enter the value of pi");
+    double pi = input.nextDouble(); 
+    input.nextLine(); 
+    break;
+        }
+        catch(Exception e){
+            System.out.println("You've entered an incorrect datatype, please enter a double.");
+            input.nextLine();
+        }
+    }
+    
+   }
+}
+/* 
+System.out.println("What's your name?");
+String name = input.nextLine(); 
+System.out.println(name);
+*/
