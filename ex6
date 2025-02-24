@@ -7,22 +7,26 @@ public class Main {
         Scanner input = new Scanner(System.in);
         getAge(input);   
         getPi(input);
+        getName(input);
+    
 
 
     }
-    static void getName(Scanner input){
+      static String getName(Scanner input){
         while(true){
         try{
             System.out.println("What's your name?");
-            String name = input.nextLine(); 
+            String bot = input.nextLine();
+            Eval name = new Eval(bot);
             // System.out.println(name); 
            break;
         }
         catch (Exception e){
-            System.out.println("You've entered an incorrect datatype, please enter an int.");
-            input.nextLine();
+            System.out.println("You've entered an incorrect datatype, please enter an String.");
+        
         }
     }
+            return null;
 }
     
     static void getAge(Scanner input){
@@ -45,7 +49,7 @@ public class Main {
    static void getPi(Scanner input){
     while(true){
         try{
-    System.out.println("Enter the value of pi");
+    System.out.println("Enter a double of your choice (very creative prompt)");
     double pi = input.nextDouble(); 
     input.nextLine(); 
     break;
@@ -58,8 +62,3 @@ public class Main {
     
    }
 }
-/* 
-System.out.println("What's your name?");
-String name = input.nextLine(); 
-System.out.println(name);
-*/
